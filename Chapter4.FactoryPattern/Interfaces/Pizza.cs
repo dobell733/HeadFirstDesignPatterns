@@ -1,25 +1,18 @@
-﻿using System;
+﻿using Chapter4.SimpleFactoryPattern.Ingredients;
 
 namespace Chapter4.SimpleFactoryPattern.Interfaces
 {
     internal abstract class Pizza
     {
-        internal string? Name { get; set; }
-        internal string? Dough { private get; set; }
-        internal string? Sauce { private get; set; }
-        internal List<string> Toppings { get; set; } = new List<string>();
+        internal required string Name { get; set; }
+        internal required Dough Dough { private get; set; }
+        internal Sauce? Sauce { private get; set; }
+        internal Cheese? Cheese { private get; set; }
+        internal Veggie[]? Veggies { private get; set; }
+        internal Pepperoni? Pepperoni { get; set; }
+        internal Clam? Clam { private get; set; }
 
-        internal void Prepare() { 
-            Console.WriteLine($"Preparing {Name}");
-            Console.WriteLine("Tossing dough...");
-            Console.WriteLine("Adding sauce...");
-            Console.WriteLine("Adding toppings: ");
-            foreach (string topping in Toppings)
-            {
-                Console.WriteLine($" {topping}");
-            }
-            Console.WriteLine();
-        }
+        internal abstract void Prepare();
 
         internal void Bake() => Console.WriteLine("Bake for 25 minutes at 350");
         internal virtual void Cut() => Console.WriteLine("Cutting the pizza into diagonal slices");
