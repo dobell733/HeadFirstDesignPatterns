@@ -14,8 +14,8 @@ namespace Chapter4.SimpleFactoryPattern.PizzaStores
 
             if (type == "cheese")
             {
-                // this could just return ChicagoStyleCheesePizza type to be a regular factory pattern.
-                // this usese an Abstract Factory to get families of ingredients for a cheese Pizza based on region
+                // this could just return "ChicagoStyleCheesePizza : Pizza" type which impelements it's ingredients to be a regular factory pattern.
+                // this uses an Abstract Factory to get families of ingredients based on region instead.
                 pizza = new CheesePizza(ingredientFactory) { Name = "Chicago Style Cheese Pizza" };
             }
             else if (type == "veggie")
