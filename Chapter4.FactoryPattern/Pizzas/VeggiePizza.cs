@@ -2,12 +2,11 @@
 
 namespace Chapter4.SimpleFactoryPattern.Pizzas
 {
-    internal class CheesePizza : Pizza
+    internal class VeggiePizza : Pizza
     {
-        // instead of creating NYStyleCheesePizza, ChicagoStyleCheesePizza, and CaliforniaStyleCheesePizza; let an IngredientFactory handle the changes.
         public PizzaIngredientFactory IngredientFactory { get; }
 
-        public CheesePizza(PizzaIngredientFactory ingredientFactory)
+        public VeggiePizza(PizzaIngredientFactory ingredientFactory)
         {
             IngredientFactory = ingredientFactory;
         }
@@ -23,6 +22,16 @@ namespace Chapter4.SimpleFactoryPattern.Pizzas
 
             Cheese = IngredientFactory.CreateCheese();
             Console.WriteLine($"Cheese: {Cheese?.GetType().Name}");
+
+            Veggies = IngredientFactory.CreateVeggies();
+            Console.WriteLine($"Veggies:");
+            if (Veggies != null)
+            {
+                foreach (var veggie in Veggies)
+                {
+                    Console.WriteLine($" - {veggie.GetType().Name}");
+                }
+            }
         }
     }
 }

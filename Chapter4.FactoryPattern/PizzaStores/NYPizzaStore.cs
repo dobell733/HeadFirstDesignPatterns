@@ -1,4 +1,5 @@
-﻿using Chapter4.SimpleFactoryPattern.Interfaces;
+﻿using Chapter4.SimpleFactoryPattern.IngredientFactories;
+using Chapter4.SimpleFactoryPattern.Interfaces;
 using Chapter4.SimpleFactoryPattern.Pizzas;
 
 namespace Chapter4.SimpleFactoryPattern.PizzaStores
@@ -7,23 +8,27 @@ namespace Chapter4.SimpleFactoryPattern.PizzaStores
     {
         internal override Pizza? CreatePizza(string type)
         {
+            Pizza pizza = null;
+
+            PizzaIngredientFactory ingredientFactory = new NYPizzaIngredientFactory();
+
             if (type == "cheese")
             {
-                return new NYStyleCheesePizza();
+                pizza = new CheesePizza(ingredientFactory) { Name = "New York Style Cheese Pizza" };
             }
             else if (type == "veggie")
             {
-                return new NYStyleVeggiePizza();
+                pizza = new VeggiePizza(ingredientFactory) { Name = "New York Style Veggie Pizza" };
             }
             else if (type == "clam")
             {
-                return new NYStyleClamPizza();
+                pizza = new ClamPizza(ingredientFactory) { Name = "New York Style Clam Pizza" };
             }
             else if (type == "pepperoni")
             {
-                return new NYStylePepperoniPizza();
+                pizza = new PepperoniPizza(ingredientFactory) { Name = "New York Style Pepperoni Pizza" };
             }
-            else return null;
+            return pizza;
         }
     }
 }

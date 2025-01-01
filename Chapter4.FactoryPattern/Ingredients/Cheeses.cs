@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Chapter4.SimpleFactoryPattern.Ingredients
 {
-    internal class ReggianoCheese : Cheese
-    {
-    }
+    internal class ReggianoCheese : Cheese { }
+    internal class MozzarellaCheese : Cheese { }
+
 }
+

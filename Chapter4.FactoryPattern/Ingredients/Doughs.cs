@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Chapter4.SimpleFactoryPattern.Ingredients
 {
-    internal class Onion : Veggie
-    {
-    }
+    internal class ThinCrustDough : Dough { }
+    internal class ThickCrustDough: Dough { }
+
 }
+

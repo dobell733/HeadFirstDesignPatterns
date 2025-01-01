@@ -1,4 +1,5 @@
-﻿using Chapter4.SimpleFactoryPattern.Interfaces;
+﻿using Chapter4.SimpleFactoryPattern.IngredientFactories;
+using Chapter4.SimpleFactoryPattern.Interfaces;
 using Chapter4.SimpleFactoryPattern.Pizzas;
 
 namespace Chapter4.SimpleFactoryPattern.PizzaStores
@@ -7,23 +8,29 @@ namespace Chapter4.SimpleFactoryPattern.PizzaStores
     {
         internal override Pizza? CreatePizza(string type)
         {
+            Pizza pizza = null;
+
+            PizzaIngredientFactory ingredientFactory = new ChicagoPizzaIngredientFactory();
+
             if (type == "cheese")
             {
-                return new ChicagoStyleCheesePizza();
+                // this could just return ChicagoStyleCheesePizza type to be a regular factory pattern.
+                // this usese an Abstract Factory to get families of ingredients for a cheese Pizza based on region
+                pizza = new CheesePizza(ingredientFactory) { Name = "Chicago Style Cheese Pizza" };
             }
             else if (type == "veggie")
             {
-                return new ChicagoStyleVeggiePizza();
+                pizza = new VeggiePizza(ingredientFactory) { Name = "Chicago Style Veggie Pizza" };
             }
             else if (type == "clam")
             {
-                return new ChicagoStyleClamPizza();
+                pizza = new ClamPizza(ingredientFactory) { Name = "Chicago Style Clam Pizza" };
             }
             else if (type == "pepperoni")
             {
-                return new ChicagoStylePepperoniPizza();
+                pizza = new PepperoniPizza(ingredientFactory) { Name = "Chicago Style Pepperoni Pizza" };
             }
-            else return null;
+            return pizza;
         }
     }
 }

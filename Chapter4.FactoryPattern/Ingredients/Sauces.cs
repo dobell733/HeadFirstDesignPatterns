@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Chapter4.SimpleFactoryPattern.Ingredients
 {
-    internal class Mushroom : Veggie
-    {
-    }
+    internal class MarinaraSauce : Sauce { }
+    internal class PlumTomatoSauce : Sauce { }
+
 }
+

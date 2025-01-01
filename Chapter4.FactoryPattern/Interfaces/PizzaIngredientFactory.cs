@@ -2,6 +2,7 @@
 
 namespace Chapter4.SimpleFactoryPattern.Interfaces
 {
+    // abstract interface for creating family of products
     internal interface PizzaIngredientFactory
     {
         public Dough CreateDough();

@@ -3,6 +3,7 @@ using Chapter4.SimpleFactoryPattern.Interfaces;
 
 namespace Chapter4.SimpleFactoryPattern.IngredientFactories
 {
+    // concrete subclass to create family of ingredients for ny pizzas
     internal class NYPizzaIngredientFactory : PizzaIngredientFactory
     {
         public Dough CreateDough() => new ThinCrustDough();
