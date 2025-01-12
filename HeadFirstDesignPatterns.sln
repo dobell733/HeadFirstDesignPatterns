@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Chapter2.RefactoringGuruObs
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Chapter3.DecoratorPattern", "Chapter3.DecoratorPattern\Chapter3.DecoratorPattern.csproj", "{5A0686C0-443A-4059-B3F2-A9A17C000A4F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Chapter4.SimpleFactoryPattern", "Chapter4.FactoryPattern\Chapter4.SimpleFactoryPattern.csproj", "{DB18AC46-AE7B-4C92-ABCD-CD12F90D0998}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Chapter4.FactoryPattern", "Chapter4.FactoryPattern\Chapter4.FactoryPattern.csproj", "{DB18AC46-AE7B-4C92-ABCD-CD12F90D0998}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chapter5.Singleton", "Chapter5.Singleton\Chapter5.Singleton.csproj", "{D043A507-D55F-44FC-8C05-C5BE8E9D7172}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{DB18AC46-AE7B-4C92-ABCD-CD12F90D0998}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DB18AC46-AE7B-4C92-ABCD-CD12F90D0998}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DB18AC46-AE7B-4C92-ABCD-CD12F90D0998}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D043A507-D55F-44FC-8C05-C5BE8E9D7172}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D043A507-D55F-44FC-8C05-C5BE8E9D7172}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D043A507-D55F-44FC-8C05-C5BE8E9D7172}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D043A507-D55F-44FC-8C05-C5BE8E9D7172}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
